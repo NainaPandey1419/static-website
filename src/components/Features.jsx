@@ -7,8 +7,6 @@ import {
   Container,
   Card,
   CardContent,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import FlipIcon from '@mui/icons-material/Flip';
 import "../App.css";
@@ -16,7 +14,6 @@ import { featureStyles } from "./FeaturesStyling";
 
 const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const theme = useTheme();
 
   const handleClick = () => {
     onFeatureClick(title);
@@ -77,7 +74,6 @@ const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
 };
   
 const Features = () => {
-  const theme = useTheme();
   const navigate = useNavigate();
 
   
