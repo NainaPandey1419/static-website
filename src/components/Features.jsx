@@ -17,7 +17,6 @@ import { featureStyles } from "./FeaturesStyling";
 const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleClick = () => {
     onFeatureClick(title);
@@ -79,7 +78,6 @@ const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
   
 const Features = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const navigate = useNavigate();
 
   
