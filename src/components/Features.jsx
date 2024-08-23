@@ -110,9 +110,9 @@ const features = [
   }
 ];
 
-  const handleFeatureClick = (title) => {
-    navigate(`/feature/${encodeURIComponent(title)}`);
-  };
+const handleFeatureClick = (title, description) => {
+  navigate(`/feature/${encodeURIComponent(title)}`, { state: { description } });
+};
 
   return (
     <Box sx={featureStyles.featuresBox}>
@@ -147,7 +147,7 @@ const features = [
                 videoSrc={feature.videoSrc}
                 title={feature.title}
                 description={feature.description}
-                onFeatureClick={handleFeatureClick}
+  onFeatureClick={(title) => handleFeatureClick(feature.title, feature.description)}
               />
             </Grid>
           ))}
