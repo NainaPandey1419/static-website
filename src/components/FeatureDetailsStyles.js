@@ -18,6 +18,7 @@ export const featureDetailsStyles = {
     },
     backButton: {
       mt: 2,
+      mb:3,
       bgcolor: '#f77b24',
       '&:hover': {
         bgcolor: '#d15e0a',
