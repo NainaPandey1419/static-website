@@ -1,37 +1,63 @@
 export const featureDetailsStyles = {
-    container: {
-      color: 'black',
-      px: { xs: 2, sm: 3, md: 4 }, 
-      maxWidth: { sm: '100%', md: '80%', lg: '60%' }, 
+  container: {
+    py: 8,
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  paper: {
+    p: 4,
+    borderRadius: 2,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    color:'black'
+  },
+  title: {
+    fontFamily: '"Playfair Display", serif',
+    fontWeight: 700,
+    color: '#f77b24',
+    mb: 2,
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontFamily: '"Roboto", sans-serif',
+    fontWeight: 400,
+    color: '#333',
+    mb: 4,
+    textAlign: 'center',
+  },
+  benefitsContainer: {
+    mb: 4,
+  },
+  benefitItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  icon: {
+    fontSize: 48,
+    color: '#f77b24',
+    mb: 2,
+  },
+  sectionTitle: {
+    fontFamily: '"Playfair Display", serif',
+    fontWeight: 600,
+    color: '#333',
+    mb: 2,
+  },
+  benefitsList: {
+    paddingLeft: '20px',
+    marginBottom: '24px',
+  },
+  benefitItem: {
+    marginBottom: '8px',
+  },
+  backButton: {
+    backgroundColor: '#f77b24',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#e66d1f',
     },
-    content: {
-      mt: { xs: 2, sm: 3, md: 4 },
-    },
-    title: {
-      fontWeight: 'bold',
-      mb: 2,
-      fontSize: { xs: '24px', sm: '32px', md: '40px' }, 
-    },
-    description: {
-      mb: 3,
-      fontSize: { xs: '16px', sm: '17.6px', md: '19.2px' }, 
-    },
-    backButton: {
-      mt: 2,
-      mb:3,
-      bgcolor: '#f77b24',
-      '&:hover': {
-        bgcolor: '#d15e0a',
-      },
-      fontSize: { xs: '12.8px', sm: '14.4px', md: '16px' }, 
-    },
-    loadingContainer: {
-      display: 'flex',
-      justifyContent: 'center',
-      mt: { xs: 2, sm: 3, md: 4 },
-    },
-    notFoundContainer: {
-      mt: { xs: 2, sm: 3, md: 4 },
-    },
-  };
-  
+  },
+};

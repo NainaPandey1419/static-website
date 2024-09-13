@@ -10,28 +10,22 @@ import {
 } from "@mui/material";
 import FlipIcon from '@mui/icons-material/Flip';
 import "../App.css";
-import { featureStyles } from "./FeaturesStyling";
+import { featureStyles } from "./FeaturesStyles";
 
 const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   const handleClick = () => {
     onFeatureClick(title);
-    setIsFlipped(!isFlipped);
   };
 
   return (
     <Card
-      className={`card-hover ${isFlipped ? 'is-flipped' : ''}`}
+      className="card-hover"
       onClick={handleClick}
       sx={featureStyles.card}
     >
       <Box
         className="card-inner"
-        sx={{
-          ...featureStyles.cardInner,
-          transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)',
-        }}
+        sx={featureStyles.cardInner}
       >
         <Box sx={featureStyles.cardFace}>
           <Box
@@ -55,24 +49,14 @@ const Feature = ({ videoSrc, title, description, onFeatureClick }) => {
               className="flip-icon"
               sx={featureStyles.flipIcon}
             >
-              <FlipIcon sx={{ mr: 1 }} />
               <Typography variant="body2">Click to see more</Typography>
             </Box>
           </CardContent>
         </Box>
-        <CardContent sx={featureStyles.cardBack}>
-          <Typography
-            variant="body2"
-            sx={featureStyles.description}
-          >
-            {description}
-          </Typography>
-        </CardContent>
       </Box>
     </Card>
   );
 };
-  
 const Features = () => {
   const navigate = useNavigate();
 
